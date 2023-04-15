@@ -71,7 +71,7 @@ export const remove = async (req, res) => {
 };
 export const update = async (req, res) => {
   try {
-    const category = await Category.findOneAndUpdate(
+    const category = await Category.findByIdAndUpdate(
       { _id: req.params.id },
       req.body,
       { new: true }

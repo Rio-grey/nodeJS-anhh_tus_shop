@@ -25,7 +25,7 @@ export const checkPermission = async (req, res, next) => {
       }
     }
     const user = await User.findById(payload.id);
-    if (!user && user.role !== "admin") {
+    if (user.role !== "admin") {
       return res.status(403).json({
         message: "Bạn không có quyền thực hiện hành động này",
       });

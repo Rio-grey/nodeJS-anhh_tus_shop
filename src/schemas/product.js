@@ -10,8 +10,4 @@ export const productSchema = joi.object({
   brand: joi.string().required(),
   images: joi.string().required(),
   categoryId: joi.string().required(),
-  createdAt: joi.date().default(() => new Date()),
-  updatedAt: joi.date().default(() => new Date()),
-  deletedAt: joi.date().default(null),
-  deleted: joi.boolean().default(false),
 });
